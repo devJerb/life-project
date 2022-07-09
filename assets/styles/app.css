@@ -1,0 +1,197 @@
+/* Tags */
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  word-spacing: 2px;
+}
+
+body {
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+section {
+  margin: 1rem auto;
+  width: 40rem;
+  max-width: 90%;
+}
+
+section ul {
+  padding: 1rem;
+  max-height: 40rem;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+section > h2 {
+  color: #fff;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  background: transparent;
+  color: #E65A91;
+  border: 1px solid #E65A91;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button.alt {
+  background: #fff;
+  color: #318199;
+  border-color: #318199;
+}
+
+button.alt:hover,
+button.alt:active {
+  background: #318199;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background: #E65A91;
+  color: #fff;
+  transition: 0.3s;
+}
+
+/* Typography */
+
+#main-header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #318199;
+  position: fixed;
+}
+
+#main-header h1 {
+  color: #fff;
+  margin: 0;
+}
+
+#main-header button {
+  background: #fff;
+  color: #318199;
+  margin-left: 50%;
+  border-radius: 20px;
+  padding: 10px 30px;
+  border-color: transparent;
+  font-size: 20px;
+}
+
+#main-header button:hover,
+#main-header button:active {
+  transition: 0.3s;
+  background: #318199;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 2rem;
+  background: #fff;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+#active-projects {
+  border: 3px solid #E65A91;
+}
+
+#active-projects > header {
+  background: #E65A91;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#active-projects header h2 {
+  color: #fff;
+  margin: 0;
+}
+
+#finished-projects {
+  border: 3px solid #318199;
+}
+
+#finished-projects > header {
+  background: #318199;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#finished-projects header h2 {
+  color: #fff;
+  margin: 0;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+.modal.visible {
+  display: block;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+#entry {
+  display: flex;
+  flex-direction: column;
+}
